@@ -1,0 +1,11 @@
+# dsh-markdown-composer bundle patch
+#
+# 持久插件挂载层（package.json 的 dsh.bundle.patch）：安装时由 DSH 的 bundle
+# 协调把本包加进 profile 的 dsh.profile.bundles，启动时合并下面这一行 insert。
+#
+# 想改配置，不要改这个文件；在你自己的 profile 补丁层里按同一个 id
+# （markdown-composer）重述整行并写上 config 即可覆盖——补丁按行替换
+# config，不做深度合并。
+- insert:
+    - id: markdown-composer
+      name: 'dsh-markdown-composer'
